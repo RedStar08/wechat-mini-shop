@@ -1,0 +1,32 @@
+/**app.wxss**/
+
+@import "./styles/iconfont.wxss";
+
+/* 不支持通配符 * 需要手写 */
+
+page,
+view,
+text,
+swiper,
+swiper-item,
+image,
+navigator {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* 配置 APP 主题 
+   配置全局字体大小，假设设计稿为 375px 
+   1px = 2rpx 默认为 14px = 28rpx
+*/
+
+page {
+  --themeColor: #eb4450;
+  font-size: 28rpx;
+}
+
+image {
+  width: 100%;
+}

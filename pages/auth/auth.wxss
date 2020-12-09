@@ -1,0 +1,7 @@
+/* pages/auth/auth.wxss */
+
+.auth {
+  width: 100%;
+  padding: 40rpx;
+  text-align: center;
+}

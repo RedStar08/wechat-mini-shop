@@ -1,0 +1,31 @@
+.synthesize {
+  .goods-item {
+    display: flex;
+    border: 1px solid #ccc;
+    .goods-image {
+      flex:2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      image {
+        width: 80%;
+      }
+    }
+    .goods-content{
+      flex:3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .goods-text{
+        display: -webkit-box;
+        overfLow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      .goods-price{
+        color: var(--themeColor);
+        font-size: 30rpx;
+      }
+    }
+  }
+}

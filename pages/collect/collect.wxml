@@ -1,0 +1,20 @@
+<Tabs class="tabs" tabs="{{tabs}}" binditemChanged="handleItemChanged">
+  <view class="content">
+    <view class="header-bar">
+      <button size="mini" plain class="active">全部</button>
+      <button size="mini" plain>正在热卖</button>
+      <button size="mini" plain>即将上线</button>
+    </view>
+    <view class="goods-group">
+      <navigator class="goods-item" wx:for="{{collect}}" wx:key="goods_id" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+        <view class="goods-image">
+          <image src="{{item.goods_small_logo || 'http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_1_400x400.jpg'}}" mode="widthFix" />
+        </view>
+        <view class="goods-content">
+          <view class="goods-text">{{item.goods_name}}</view>
+          <view class="goods-price">￥{{item.goods_price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</Tabs>

@@ -1,0 +1,147 @@
+page {
+  padding-bottom: 90rpx;
+}
+.address {
+  .address-add {
+    width: 100vw;
+    padding: 20rpx;
+    text-align: center;
+    button {
+      width: 60%;
+    }
+  }
+  .address-info {
+    width: 100vw;
+    padding: 20rpx;
+    font-size: 28rpx;
+    .address-user {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20rpx;
+      .user-name {
+        flex: 1;
+      }
+      .user-phone {
+        flex: 1;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.carts {
+  .carts-title{
+    padding: 20rpx;
+    font-size: 36rpx;
+    color: var(--themeColor);
+    border-top: 5rpx solid currentColor;
+    border-bottom: 5rpx solid currentColor;
+  }
+  .carts-content{
+    .carts-item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20rpx;
+      height: 220rpx;
+      border-bottom: 1rpx solid #666;
+      .item-checkbox {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .item-image {
+        flex: 2;
+        navigator {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          image {
+            width: 80%;
+          }
+        }
+      }
+      .item-detil {
+        flex: 4;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100%;
+        .item-text {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          color: #666;
+        }
+        .item-main {
+          display: flex;
+          justify-content: space-between;
+          .item-price {
+            font-size: 34rpx;
+            color: var(--themeColor);
+          }
+          .item-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .item-number-edit {
+              text-align: center;
+              border: 1rpx solid #666;
+              width: 40rpx;
+              height: 40rpx;
+            }
+            .item-number-text {
+              padding: 0 20rpx;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-tool {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .tool-all-checkbox {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tool-count {
+    flex: 4;
+    text-align: right;
+    padding: 0 20rpx;
+    color: #666;
+    .tool-count-price {
+      font-size: 34rpx;
+      color: #000;
+      text {
+        color: red;
+      }
+    }
+    
+  }
+  .tool-account {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    font-size: 36rpx;
+    background-color: red;
+  }
+}

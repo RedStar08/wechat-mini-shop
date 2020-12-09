@@ -1,0 +1,38 @@
+<!-- 搜索框 -->
+<view class="searchInput">
+  <searchInput>
+    <text class="iconfont icon-search"></text>
+  </searchInput>
+</view>
+<view class="cate">
+  <!-- 左侧分类导航 -->
+  <scroll-view class="aside-item" scroll-y>
+    <view class="aside-list {{index === currentIndex ? 'active' : ''}}" wx:for="{{asideList}}" wx:key="cat_id" bindtap="handleTap" data-index="{{index}}">{{item}}
+    </view>
+  </scroll-view>
+  <!-- 右侧分类项 -->
+  <scroll-view class="cate-item " scroll-y scroll-top="{{cateItemTop}}">
+    <view class="cate-group" wx:for="{{cateItem}}" wx:key="cat_id">
+      <!-- 分类标题 -->
+      <view class="cate-tittle">
+        <text class="deraction">/</text>
+        <text class="cate-group-tittle">{{item.cat_name}}</text>
+        <text class="deraction">/</text>
+      </view>
+      <!-- 分类内容 -->
+      <view class="cate-content">
+        <view class="cate-content-item" wx:for="{{item.children}}" wx:key="cat_id" wx:for-item="item1" wx:for-index="index1">
+          <navigator url="/pages/goods_list/goods_list?cat_id={{item1.cat_id}}" open-type="navigate">
+            <!-- 分类图片 -->
+            <image src="{{item1.cat_icon}}" mode="widthFix" />
+            <!-- 分类名称 -->
+            <text class="" selectable="false" space="false" decode="false">
+              {{item1.cat_name}}
+            </text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>

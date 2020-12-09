@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "searchInput": "../../components/searchInput/searchInput",
+    "Tabs": "../../components/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "商品列表-微商城"
+}

@@ -1,0 +1,108 @@
+page {
+  padding-bottom: 90rpx;
+}
+.address {
+  border-bottom: 1px solid #000;
+}
+.address .address-info {
+  width: 100vw;
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.address .address-info .address-user {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.address .address-info .address-user .user-name {
+  flex: 1;
+}
+.address .address-info .address-user .user-phone {
+  flex: 1;
+  text-align: right;
+}
+.carts .carts-content .carts-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx;
+  height: 220rpx;
+  border-bottom: 1rpx solid #666;
+}
+.carts .carts-content .carts-item .item-image {
+  flex: 2;
+}
+.carts .carts-content .carts-item .item-image navigator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.carts .carts-content .carts-item .item-image navigator image {
+  width: 80%;
+}
+.carts .carts-content .carts-item .item-detil {
+  flex: 4;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+}
+.carts .carts-content .carts-item .item-detil .item-text {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #666;
+}
+.carts .carts-content .carts-item .item-detil .item-main {
+  display: flex;
+  justify-content: space-between;
+}
+.carts .carts-content .carts-item .item-detil .item-main .item-price {
+  font-size: 34rpx;
+  color: var(--themeColor);
+}
+.carts .carts-content .carts-item .item-detil .item-main .item-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carts .carts-content .carts-item .item-detil .item-main .item-number .item-number-text {
+  padding: 0 20rpx;
+}
+.footer-tool {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-tool .tool-count {
+  flex: 4;
+  text-align: right;
+  padding: 0 20rpx;
+  color: #666;
+}
+.footer-tool .tool-count .tool-count-price {
+  font-size: 34rpx;
+  color: #000;
+}
+.footer-tool .tool-count .tool-count-price text {
+  color: red;
+}
+.footer-tool .tool-account {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  font-size: 36rpx;
+  background-color: red;
+}

@@ -1,0 +1,135 @@
+page {
+  background-color: #eee;
+}
+
+.user {
+  overflow: hidden;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  .user-info {
+    position: relative;
+    .user-bg {
+      width: 100vw;
+      height: 50vh;
+      filter: blur(8rpx);
+    }
+    .user-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      .user-image {
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 50%;
+      }
+      .user-name {
+        color: var(--themeColor);
+        font-size: 36rpx;
+        margin-top: 40rpx;
+      }
+    }
+  }
+}
+
+
+.content {
+  position: relative;
+  top: -60rpx;
+  left: 0;
+  margin: 0 30rpx;
+  color: #666;
+  background-color: #fff;
+  .history {
+    display: flex;
+    text-align: center;
+    padding: 20rpx 0;
+    .history-item {
+      flex: 1;
+      .history-item-number {
+        color: var(--themeColor);
+      }
+      .history-item-text {
+        padding: 10rpx 0;
+      }
+    }
+  }
+}
+
+.orders {
+  border-top: 20rpx solid #eee;
+  .orders-title {
+    padding: 20rpx;
+    border-bottom: 5rpx solid #eee;
+  }
+  .orders-content {
+    display: flex;
+    padding: 20rpx 0;
+    text-align: center;
+    .orders-item {
+      flex: 1;
+      .iconfont {
+        color: var(--themeColor);
+        font-size: 40rpx;
+      }
+      .order-item-text {
+        padding: 10rpx 0;
+      }
+    }
+  }
+}
+
+.address {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-top: 20rpx solid #eee;
+  position: relative;
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+.contact {
+  border-top: 20rpx solid #eee;
+  .contact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx;
+    border-bottom: 5rpx solid #eee;
+    position: relative;
+    button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+}
+
+.share {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-top: 20rpx solid #eee;
+  position: relative;
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}

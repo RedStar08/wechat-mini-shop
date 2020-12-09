@@ -1,0 +1,85 @@
+<!--pages/user/user.wxml-->
+<view class="user">
+  <view class="user-info" wx:if="{{userInfo.nickName}}">
+    <image class="user-bg" src="{{userInfo.avatarUrl}}" mode="scaleToFill" />
+    <view class="user-content">
+      <image class="user-image" src="{{userInfo.avatarUrl}}" mode="widthFix" />
+      <view class="user-name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view wx:else>
+    <button open-type="getUserInfo" plain type="primary" bindgetuserinfo="handleGetUserInfo">登录</button>
+  </view>
+</view>
+<view class="content">
+  <!-- 浏览历史 -->
+  <view class="history">
+    <navigator class="history-item" url="">
+      <view class="history-item-number">0</view>
+      <view class="history-item-text">收藏的店铺</view>
+    </navigator>
+    <navigator class="history-item" url="/pages/collect/collect">
+      <view class="history-item-number">{{allCollect}}</view>
+      <view class="history-item-text">收藏的商品</view>
+    </navigator>
+    <navigator class="history-item" url="">
+      <view class="history-item-number">0</view>
+      <view class="history-item-text">关注的商品</view>
+    </navigator>
+    <navigator class="history-item" url="">
+      <view class="history-item-number">0</view>
+      <view class="history-item-text">我的足迹</view>
+    </navigator>
+  </view>
+  <!-- 订单状态 -->
+  <view class="orders">
+    <view class="orders-title">我的订单</view>
+    <view class="orders-content">
+      <navigator class="orders-item" url="/pages/order/order?type=1">
+        <view class="iconfont icon-order"></view>
+        <view class="order-item-text">全部订单</view>
+      </navigator>
+      <navigator class="orders-item" url="/pages/order/order?type=2">
+        <view class="iconfont icon-pay"></view>
+        <view class="order-item-text">待付款</view>
+      </navigator>
+      <navigator class="orders-item" url="/pages/order/order?type=3">
+        <view class="iconfont icon-delivery"></view>
+        <view class="order-item-text">待收货</view>
+      </navigator>
+      <navigator class="orders-item" url="/pages/order/order?type=4">
+        <view class="iconfont icon-return"></view>
+        <view class="order-item-text">退款/退货</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 收获地址管理 -->
+  <view class="address">
+    <view>收获地址管理</view>
+    <view class="iconfont icon-right"></view>
+    <button bindtap="handleChooseAddress"></button>
+  </view>
+  <!-- 联系客服 -->
+  <view class="contact">
+    <view class="contact-item">
+      <view>联系客服</view>
+      <view>400-618-4000</view>
+      <button open-type="contact"></button>
+    </view>
+    <view class="contact-item">
+      <view>意见反馈</view>
+      <view class="iconfont icon-right"></view>
+      <button open-type="feedback"></button>
+    </view>
+    <view class="contact-item">
+      <view>关于我们</view>
+      <view class="iconfont icon-right"></view>
+      <button open-type="contact"></button>
+    </view>
+  </view>
+  <view class="share">
+    <view>把应用推荐给其他人</view>
+    <view class="iconfont icon-right"></view>
+    <button open-type="share"></button>
+  </view>
+</view>

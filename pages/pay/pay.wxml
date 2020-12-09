@@ -1,0 +1,52 @@
+<!-- 收获地址部分 -->
+<view class="address">
+  <!-- 显示收货地址 -->
+  <view class="address-info">
+    <view class="address-user">
+      <view class="user-name">{{address.userName}}</view>
+      <view class="user-phone">{{address.telNumber}}</view>
+    </view>
+    <view class="address-detail">{{address.all}}</view>
+  </view>
+</view>
+<!-- 购物车部分 -->
+<view class="carts">
+  <!-- 购物车主体部分 -->
+  <view class="carts-content">
+    <!-- 购物车商品项 -->
+    <view class="carts-item" wx:for="{{cart}}" wx:key="goods_id">
+      <!-- 图片部分 -->
+      <view class="item-image">
+        <navigator open-type="navigate" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+          <image src="{{item.goods_small_logo}}" mode="widthFix" />
+        </navigator>
+      </view>
+      <!-- 商品详细部分 -->
+      <view class="item-detil">
+        <!-- 文字描述 -->
+        <view class="item-text">{{item.goods_name}}</view>
+        <!-- 主体 -->
+        <view class="item-main">
+          <!-- 商品价格 -->
+          <view class="item-price">￥{{item.goods_price}}</view>
+          <!-- 商品数量 -->
+          <view class="item-number">
+            <view class="item-number-text">X {{item.goods_number}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 底部工具条 -->
+<view class="footer-tool">
+  <!-- 合计 -->
+  <view class="tool-count">
+    <view class="tool-count-price">
+      合计：<text>￥ {{totalPrice}}</text>
+    </view>
+    <view>包含运费</view>
+  </view>
+  <!-- 结算 -->
+  <view class="tool-account" bindtap="handlePay">支付({{totalNum}})</view>
+</view>
